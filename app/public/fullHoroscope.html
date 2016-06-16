@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="fullHoroScopeApp">
+<head>
+<base href="/">
+<meta charset="UTF-8">
+<title>Full Horoscope</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap-responsive.css" rel="stylesheet">
+<!-- hamburger CSS -->
+<link rel="stylesheet" href="css/hamburger.css">
+
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/circle.css" />
+<!-- Bootstrap core CSS -->
+</head>
+
+<body ng-controller="fullHoroscope">
+    
+<header id="top" role="banner">
+    <div class="block">
+        <a class="nav-btn" id="nav-open-btn" href="#nav">Book Navigation</a>
+        <a href="timeLine.html?uuid={{myUrl}}" target="_self"><img id="logo" src="./images/logo.png"> </a>
+        <a href="timeLine.html?uuid={{myUrl}}" target="_self"><img id="user" src="{{details.user[1].imageUrl}}">  </a>
+    </div>
+</header>
+<nav id="nav" role="navigation">
+    <div class="block">
+
+        <h2 class="block-title">Chapters</h2>
+        <ul>
+           <li class="is-active"><a href="timeLine.html?uuid={{myUrl}}" target="_self">Homepage</a></li>
+            <li><a href="timeLine.html?uuid={{myUrl}}&day=sunday" target="_self">Sunday</a></li>
+            <li><a href="timeLine.html?uuid={{myUrl}}&day=monday" target="_self">Monday</a></li>
+            <li><a href="timeLine.html?uuid={{myUrl}}&day=thesday" target="_self">Thesday</a></li>
+            <li><a href="timeLine.html?uuid={{myUrl}}&day=wednesday" target="_self">Wednesday</a></li>
+            <li><a href="timeLine.html?uuid={{myUrl}}&day=thursday" target="_self">Thursday</a></li>
+            <li><a href="timeLine.html?uuid={{myUrl}}&day=friday" target="_self">Friday</a></li>
+            <li><a href="timeLine.html?uuid={{myUrl}}&day=saturday" target="_self">Saturday</a></li>
+            <li><a href="#">LogOut</a></li>
+        </ul>
+        <a class="close-btn" id="nav-close-btn" href="#top">Return to Content</a>
+    </div>
+</nav>  
+
+
+<div class="container">
+    <div class="jumbotron">
+        <div id="section1">
+            <a href="fullHoroscope.html?uuid={{myUrl}}" target="_self"><img id="horosLogo" src="./images/logo/{{details.user[0].zodiac}}.png"></a>
+            <h1 id="today">{{details.user[0].title_full_horo}}</h1>
+        </div>   
+        <h2 class="centerText">HOROSCOPE</h2>
+        <div id="fullH">
+            <p>{{details.user[0].zodiac | capitalize }}, <span id="dateFull"></span></p><!-- not find this class -->
+            <p>{{details.user[1].name | capitalize}}</p>
+            <h2>{{details.user[0].total}}%</h2>
+            <h2 id="dayHoro">{{details.user[0].full_title_horo}}</h2>
+            
+            <div class="progress">   <!-- Percent for the day-->
+                 <div class="progress-bar" role="progressbar" aria-valuenow="70"//
+                    aria-valuemin="0" aria-valuemax="100" style="width:{{details.user[0].total}}%">
+                    <span class="sr-only"></span>
+                </div>
+            </div> <!-- Percent for the day-->
+
+            <p class="comment more" id="fullDetails">{{details.user[0].full_horoscope}} {{jsFunction()}}</p>
+        </div> 
+        <div class="row" id="full">
+            <div class="col-sm-6 col-md-4 col-lg-2">
+                <div class="c100 p{{details.user[0].love}} small">
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                    <a class="love" href="#"><img class="love" src="./images/loveFull.png"> </a>
+                </div>   
+                <h2>{{details.user[0].love}}%</h2>
+                <h4>LOVE</h4>
+            </div>
+        
+             <div class="col-sm-6 col-md-4 col-lg-2"> 
+                <div class="c100 p{{details.user[0].career}} small">
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                <a class="career" href="#"><img class="career" src="./images/careerFull.png"> </a>
+                </div>
+                <h2>{{details.user[0].career}}%</h2>
+                <h4>CAREER</h4>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-2">
+                <div class="c100 p{{details.user[0].finance}} small">
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                    <a class="finance" href="#"><img class="finance" src="./images/financeFull.png"> </a>
+                </div>
+                <h2>{{details.user[0].finance}}%</h2>
+                <h4>FINANCE</h4>
+            </div>
+         </div>
+
+    <a id="contactUs" href="#">Have an urgent question? <br> Contact Us</a> 
+
+    </div>
+</div>
+
+    <div class="col-sm-12">
+        <footer>
+            <p>© Copyright 2016 Shenkar-College Students: <span> Niv Barouch && Alaa Halumi</span></p>
+        </footer>
+    </div>
+
+<script>
+
+function seeMore(){
+
+    console.log("inside see more");
+    var showChar = 570;
+    var ellipsestext = "...";
+    var moretext = "See more>>";
+    var lesstext = "See less<<";
+    $('.more').each(function() {
+        var content = $(this).html();
+
+        if(content.length > showChar) {
+
+            var c = content.substr(0, showChar);
+            var h = content.substr(showChar-1, content.length - showChar);
+
+            var html = c + '<span class="moreelipses">'+ellipsestext+'</span>&nbsp;<span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">'+moretext+'</a></span>';
+
+            $(this).html(html);
+        }
+
+    });
+
+    $(".morelink").click(function(){
+        if($(this).hasClass("less")) {
+            $(this).removeClass("less");
+            $(this).html(moretext);
+        } else {
+            $(this).addClass("less");
+            $(this).html(lesstext);
+        }
+        $(this).parent().prev().toggle();
+        $(this).prev().toggle();
+        return false;
+    });
+}
+
+</script>
+
+<script> //day!
+var d = new Date();
+document.getElementById("dateFull").innerHTML = d.toDateString();
+</script>
+
+    <script src="js/lib/angular/angular.min.js"></script>
+    <script src="js/fullHoroscope.js"></script>
+</body>
+</html>   

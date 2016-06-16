@@ -1,0 +1,706 @@
+a, a:active, a:focus {
+outline: none;
+}
+/*
+.negativeColor{
+    color:red;
+}
+*/
+
+#submitForm{
+    position: relative;
+    width: 43%;
+    margin-left: 3em;
+    margin-top: 2em;
+}
+#loginHeader{
+    text-align: center;
+    color:#fff;
+    top: 1em;
+    position: relative;
+    font-family: 'Century Gothic';
+    margin-bottom: 2em;
+}
+
+#logoSignIn{
+    display: block;
+    width: 18%;
+    height: auto;
+    top: 2em;
+    left: 37vw;
+    position: absolute;
+}
+
+#registerContainer{
+    display: none;
+}
+
+.g-signin2,.g-signout2{
+    margin-left: 10em;
+    margin-top: 15%;
+    position: relative;
+}
+
+/*Alaa css  */
+.centerText{
+    text-align: center;
+    margin-top: 50vw;
+}
+#fullH{
+    margin-top: 5em;
+}
+#dayHoro{
+    text-transform: uppercase;
+    color: #8d8e8e;
+    margin-top: -2%;
+    font-size: 4.5vw;
+}
+/* Progress bar for percent */
+.progress{
+    height: 7px;
+    background: #d7c2d0;
+    box-shadow: inset 0px 1px 3px rgb(255, 255, 255);
+    margin-top:15px;
+}
+.progress-bar{
+    background: #f38dba;
+    border-radius: 14px;
+}
+/* end of progress bar */
+#fullDetails{
+    font-size: 4.5vw;
+    padding-bottom: 13%;
+    border-bottom: 1px solid #adb7b7;
+}
+#full{
+    border-top: none;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 12%;
+    margin-top: 10%;
+}
+.love, .finance, .career,.travel,.art,.nature{
+    position: relative;
+    margin: 0px auto;
+    display: block;
+    z-index: 9;
+    top: 0.1em;
+    cursor:auto;
+}
+.love, .career{
+    width:80%;
+    height: auto;
+}f
+
+#negative-1 h6, #negative-2 h6{
+    position: absolute;
+    left: -65%;
+    top: 0%;
+    font-size: 4vw;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+header, footer, main, article, section, nav, aside {
+    display:block;
+}
+ .container{
+    margin: 0px auto;
+}
+
+ .navbar-inverse{
+    background: white;
+    border:none;
+    height: 19%;
+    box-shadow: inset 11px 4px 5px rgba(255,255,255,1),10px 3px 9px rgba(0,0,0,0.1);
+ }
+h3,h6{font-size: 4.5vw;}
+h2{font-size:5.6vw;}
+h4{font-size:4vw;}
+
+h2,h3,h5{
+   color:#f38dba;
+   font-weight: bold;
+}
+
+/*#logo{
+display: block;
+width: 111px;
+height: 37px;
+top: 45px;
+left: 40em;
+position: absolute;
+} */
+#logo{
+    display: block;
+    width: 23%;
+    height: auto;
+    top: 30px;
+    left: 30vw;
+    position: absolute;
+}
+#user{
+    display: block;
+    width: 13%;
+    height: auto;
+    top: 1vw;
+    right: 2vw;
+    position: absolute;
+    border-radius: 50%;
+}
+
+#logOut{
+    top: 34px;
+    left:1180px;
+}
+
+body {
+    background: url("../images/background.png") top repeat-x;
+    font-family: 'Century Gothic';
+}
+
+.container .jumbotron, .container-fluid .jumbotron{
+    background: none;
+     margin-top: 1em;   
+}
+
+#section1{
+    margin: 0px auto;
+    position: relative;
+    width: 28vw;
+}
+.matcherBorder{
+    top: -14em;
+}
+#section2{
+    position: absolute;
+    margin: 0px auto;
+    top: 340%;
+    width: 100%;
+}
+#section3{
+    position: relative;
+    top: 10em;
+    left: 0%;
+    width: 93%;
+    margin: 0px auto;
+    padding-bottom: 40%;
+}
+#horosLogo{
+    width: 80%;
+    height: auto;
+    position: absolute;
+    margin: 0px auto;
+}
+#horosLogoPink{
+    width: 94px;
+    height: 72px;
+    background: url("../images/ariesPink.png");
+    position: relative;
+    margin: 0px auto; 
+    display:block;
+}
+
+#today {
+    font-size: 4.5vw;
+    color: #fff;
+    text-transform: uppercase;
+    position: absolute;
+    margin-top: 93%;
+    margin-left: -7%;
+    font-family: 'Century Gothic';
+    font-weight: bold;
+}
+h1{
+    text-align: center;
+}
+#fulltoday{
+    font-size: 2.7em;
+    color: #030000;
+    text-transform: uppercase;
+    position: relative;
+    margin-top: 0%;
+    left: 8%;
+}
+#column{
+    display: block;
+    width: 20%;
+    height: auto;
+    left: 11.4vw;
+    top: 6em;
+    position: relative;
+    padding-top: 50%;
+} 
+#date{
+    font-size: 4.1vw;
+    left: 34vw;
+    top: 16%;
+    position: absolute;
+    width: 42%;
+}
+#fulldate{
+    font-size: 210%;
+    left: 8%;
+    top: 3%;
+    position: relative;
+}
+#clock{
+    font-size: 3.3vw;
+    top: 16%;
+    left: 0vw;
+    position: absolute;
+}
+#later{
+    top: 197%;
+    text-align: center;
+    color: #8d8e8e;
+    font-size: 4.6vw;
+    font-weight: bold;
+}
+.row{
+     margin-top: 5em;
+     border-top: 0.3vw solid #adb7b7;
+     position: relative;
+}
+
+.row h2{
+    padding:15px 0px 5px 0px;
+}
+.row h4{
+    padding:15px 0px 15px 0px;
+}
+
+#matcher{
+    border-top: none;
+    border-bottom: 3px solid #f38dba;
+    text-align: center;
+    width: 100%;
+    margin-top: 60%;
+}
+#matcherName{
+    font-size: 5vw;
+    padding: 9%;
+}
+#mathcerpic{
+    width: 50%;
+margin: 0px auto;
+text-align: center;
+}
+#matcherHoro{
+    width: 41%;
+    height: auto;
+    position: relative;
+    top: 2em;
+    left: 22%;
+
+}
+.matcherDetails{
+    position: relative;
+    width: 13vw;
+    top: -4em;
+}
+#matcherLike{
+    border-top: none;
+    text-align: center;
+    width: 100%;
+    margin-top: -5%;
+    margin-bottom: 12%;
+}
+#matcherLike h4{
+    color: #f38dba;
+    right: -2vw;
+    position: relative;
+}
+#matcherTwo{
+    font-size: 4.5vw;
+    padding-bottom: 13%;
+    border-bottom: 1px solid #adb7b7;
+}
+#fullHoroscope{
+    display: block;
+    width: 44vw;
+    height: 11vw;
+    color: #f38dba;
+    background-color: #fff;
+    border: 0.6vw solid #f38dba;
+    text-transform: uppercase;
+    position: relative;
+    border-radius: 2vw;
+    font-size: 4.7vw;
+    text-align: center;
+    padding-top: 2.5%;
+    margin: 0px auto;
+    font-weight: bold;
+}
+#fullHoroscope:hover{
+     background-color: #efebe9;
+     text-decoration: none;
+     color: #fff;
+}
+
+#love p, #finance p, #career p,#negative-1 p ,#negative-2 p{
+    width: 100%;
+    height: auto;
+   font-size: 3.9vw;
+} 
+
+
+
+#love{
+    top: 26%;
+    left: 40%;
+    position: absolute;
+    width: 60%;
+}
+
+
+#negative-1{
+    top: 33%;
+    left: 40%;
+    position: absolute;
+    width: 60%;
+    color: #9a9999;
+}
+
+
+#finance{
+    top: 39%;
+    left: 40%;
+    position: absolute;
+    width: 60%;
+}
+
+#negative-2{
+    top: 48%;
+    left: 40%;
+    position: absolute;
+    width: 60%;
+    color: #9a9999;
+}
+
+#career{
+    top: 52%;
+    left: 40%;
+    position: absolute;
+    width: 60%;
+}
+.container,.jumbotron{
+    position: relative;
+}
+hr{
+    margin-bottom: 45px;
+    border: 0;
+    border-top: 5px solid #adb7b7;
+    position: relative;
+    top: 105em;
+}
+
+#byName{
+    margin-top: 0%;
+    border: none;
+    border-bottom: 1px solid #adb7b7;
+    padding-bottom: 7%;
+}
+.col-lg-2 {
+    width: 33%;
+    margin: 0px auto;
+    border-bottom: 3px solid #f38dba;
+    text-align: center;
+    float: left;
+    padding-bottom: 5%;
+}
+.col-sm-12{
+    margin: 5em 0 0 0;
+    border-top: 1px solid #adb7b7;
+    text-align: center;
+    padding:1em;
+    bottom:0px;
+    position:relative;
+}
+.col-sm-12 span{
+    font-weight: bold;
+}
+
+.horoM1,.nameM1{
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 0px auto;
+    display: block;
+    float: none;
+    border-radius: 50%;
+    
+}
+#contactUs{
+    width: 80vw;
+    height: auto;
+    display: block;
+    color: #fff;
+    background-color: #f38dba;
+    border-radius: 7%;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 4.5vw;
+    text-align: center;
+    margin: 0px auto;
+    margin-top: 1em;
+    padding: 2%;
+    font-weight: bold;
+}
+#contactUs:hover{
+    color: #f38dba;
+    background-color: #fff;
+    border: 2px solid #f38dba;
+    text-decoration: none;
+    font-weight: bold;
+}
+/*
+#fullDetails{
+    width: 85%;
+    margin: 0px auto;
+    padding: 10%;
+    font-size: 1.2vw;
+    border-bottom: 5px solid #adb7b7;
+}
+*/
+.love, .finance, .career,.travel,.art,.nature{
+    position: relative;
+    margin: 0px auto;
+    display: block;
+    z-index: 9;
+    top: 0.1em;
+}
+.love, .career{
+    width:80%;
+    height: auto;
+}
+.art,.nature{
+    width:65%;
+    height: auto;
+}
+.travel{
+    width: 89%;
+    height: auto;
+    top: 0.2em;
+}
+h6{
+    position: absolute;
+    left: -65%;
+    top: 51%;
+}
+.clear{
+    clear:both;
+}
+/*img{
+    width: 70%;
+    height: auto;
+} */
+
+/* show more */
+a {
+    color: #adb7b7;
+}
+a:visited {
+    color: #f38dba;
+}
+a.morelink {
+    text-decoration:none;
+    outline: none;
+}
+.morecontent span {
+    display: none;
+}
+.comment {
+    width: 75vw;
+    margin: 10px;
+}
+/* end of show more */
+
+@media(max-width: 520px){
+.navbar-inverse{
+        height: auto !important;
+ }
+
+#date,#clock,#today{
+           
+            }
+#logo{
+    display: block;
+    width: 18%;
+    height: auto;
+    top: 10px;
+    left: 37vw;
+    position: absolute;
+}
+
+
+}
+
+
+@media(max-width: 814px){
+#user{
+
+    width: 10%;
+    top: 1vw;
+    right: 2vw;
+}
+#logo{
+    width: 18%;
+    top: 25px;
+    left: 35vw;
+}
+#horosLogo{
+    width: 80%;
+}
+#date{
+        font-size: 4.1vw;
+    left: 31vw;
+    top: 21%;
+    position: absolute;
+    width: 42%;
+}
+}
+
+@media (min-width: 815px)  {
+#nav{
+    width: 100%;
+}
+#user{
+    width:5%;
+    top:1vw;
+}
+#logo{
+    width: 9%;
+    top: 21px;
+    left: 41vw;
+}
+#horosLogo{
+    width: 45%;
+    left: 6vw;
+}
+#today {
+    font-size: 2.5vw;
+    margin-top: 45%;
+    margin-left: 12%;
+}
+#column{
+    width: 8%;
+    left: 11.4vw;
+    padding-top: 25%;
+}
+#date {
+    font-size: 2.5vw;
+    left: 29vw;
+    top: 14em;
+}
+#clock{
+    font-size: 1.6vw;
+    top: 12%;
+    left: 8vw;
+}
+#love p, #finance p, #career p, #negative-1 p, #negative-2 p {
+    width: 100%;
+    font-size: 2.3vw;
+}
+#love {
+    top: 19%;
+    left: 30%;
+}
+#negative-1 {
+    top: 25%;
+    left: 30%;
+}
+#finance{
+    top:28%;
+    left:30%;
+}
+#negative-2 {
+    top: 34%;
+    left: 30%;
+}
+#career {
+    top: 36%;
+    left: 30%;
+}
+#negative-1 h6, #negative-2 h6 {
+    position: absolute;
+    left: -37%;
+    top: 16%;
+    font-size: 2vw;
+}
+h6{
+    font-size:2.5vw;
+    left:-38%;
+}
+h3{
+    font-size:3vw;
+}
+#section3 {
+    top: 15em;
+    padding-bottom: 30%;
+}
+#later{
+    font-size:2.6vw;
+    margin-bottom: 1em;
+}
+h2{
+    font-size: 3.6vw;
+}
+.row h2{
+    margin: 20px 0px 35px 0px;
+}
+h4 {
+    font-size: 2.7vw;
+}
+h5{
+    font-size: 3vw;
+}
+.row h4{
+    margin:10px 0px 35px 0px;
+}
+.horoM1, .nameM1 {
+    width: 80%;
+}
+#contactUs {
+    font-size: 3.5vw;
+    width:53vw;
+}
+.centerText {
+    margin-top: 25vw;
+}
+#dayHoro {
+    margin-top: 0%;
+    font-size: 3vw;
+}
+#fullDetails,#matcherTwo  {
+    font-size: 2.5vw;
+}
+.small {
+   max-width: none !important;
+   width: 814px;
+}
+#matcher{
+    margin-top: 30%;
+}
+#matcherName {
+    font-size: 3vw;
+    padding: 5%;
+}
+#mathcerpic {
+    width: 40%;
+}
+#matcherHoro {
+    width: 27%;
+}
+.matcherDetails {
+    top: -6em;
+}
+#matcherLike {
+    margin-bottom: 6%;
+}
+
+}
+
+

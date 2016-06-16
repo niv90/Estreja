@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="matcher">
+<head>
+<!--href='/' for support location angular service-->
+<base href="/">
+<meta charset="UTF-8">
+<title>You and Your Matcher</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap-responsive.css" rel="stylesheet">
+<!-- hamburger CSS -->
+<link rel="stylesheet" href="css/hamburger.css">
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/circle.css" />
+<!-- Bootstrap core CSS -->
+</head>
+
+<body>
+<header id="top" role="banner">
+    <div class="block">
+        <a class="nav-btn" id="nav-open-btn" href="#nav">Book Navigation</a>
+        <div ng-controller="header">
+            <a href="timeLine.html?uuid={{myUrl}}" target="_self"><img id="logo" src="./images/logo.png"> </a>
+            <a href="timeLine.html?uuid={{myUrl}}" target="_self"><img id="user" src="{{header.userData.user[0].imageUrl}}">  </a>
+        </div>
+     </div>
+</header>
+<nav id="nav" role="navigation">
+    <div class="block">
+        <div ng-controller="hamburger">
+            <h2 class="block-title">Chapters</h2>
+            <ul>
+                <li class="is-active"><a href="timeLine.html?uuid={{myUrl}}" target="_self">Homepage</a></li>
+                <li><a href="timeLine.html?uuid={{myUrl}}&day=sunday" target="_self">Sunday</a></li>
+                <li><a href="timeLine.html?uuid={{myUrl}}&day=monday" target="_self">Monday</a></li>
+                <li><a href="timeLine.html?uuid={{myUrl}}&day=thesday" target="_self">Thesday</a></li>
+                <li><a href="timeLine.html?uuid={{myUrl}}&day=wednesday" target="_self">Wednesday</a></li>
+                <li><a href="timeLine.html?uuid={{myUrl}}&day=thursday" target="_self">Thursday</a></li>
+                <li><a href="timeLine.html?uuid={{myUrl}}&day=friday" target="_self">Friday</a></li>
+                <li><a href="timeLine.html?uuid={{myUrl}}&day=saturday" target="_self">Saturday</a></li>
+                <li><a href="#">LogOut</a></li>
+            </ul>
+            <a class="close-btn" id="nav-close-btn" href="#top">Return to Content</a>
+        </div>
+    </div>
+</nav>  
+
+<div class="container-fluid">
+    <div class="jumbotron">
+    <div ng-controller="matcherData">
+    <div id="section1" class="matcherBorder">
+        <a href="fullHoroscope.html?uuid={{myUrl}}" target="_self" ><img id="horosLogo" src="./images/logo/{{matcher.userData.user[0].zodiac}}.png"></a>
+        <h1 id="today">{{matcher.userSystem[0].title_full_horo}}</h1>
+    </div>
+   
+       <div class="row" id="matcher"> 
+            <h2>DAILY MATCH</h2>
+            <p id="matcherName">You and <span id="???">{{matcher.userData.matcher[0].name | capitalize }} {{matcher.userData.matcher[0].lastName | capitalize }}</span> </p> 
+
+            <div class="" id="mathcerpic">
+                    <img src="{{matcher.userData.matcher[0].imageUrl}}" class="horoM1">
+                    <img id="matcherHoro" src="./images/zodiac/{{matcher.userData.matcher[0].zodiac}}.png">
+                <div class="matcherDetails">
+                    <h4>{{matcher.userData.matcher[0].zodiac | capitalize }}</h4>
+                    <h4>{{matchValue}}%</h4>
+                </div>
+
+            </div>
+         </div>
+
+        <div class="row" id="matcherLike">
+            <p id="matcherName"><span id="???">{{matcher.userData.matcher[0].name | capitalize }} {{matcher.userData.matcher[0].lastName | capitalize }}</span> likes</p>
+             <div class="col-sm-6 col-md-4 col-lg-2">
+                     <div class="c100 p{{matcher.userData.matcher[0].travel}} small">
+                        <div class="slice">
+                            <div class="bar"></div>
+                            <div class="fill"></div>
+                        </div>
+                            <a class="travel" href="#"><img class="travel" src="./images/travel.png"> </a>
+                    </div>
+                    <h4>Travel</h4>
+             </div>
+             <div class="col-sm-6 col-md-4 col-lg-2"> 
+                    <div class="c100 p{{matcher.userData.matcher[0].art}} small">
+                        <div class="slice">
+                            <div class="bar"></div>
+                            <div class="fill"></div>
+                        </div>
+                            <a class="art" href="#"><img class="art" src="./images/art.png"> </a>
+                    </div>
+                    <h4>Art</h4>
+             </div>
+             <div class="col-sm-6 col-md-4 col-lg-2">
+                    <div class="c100 p{{matcher.userData.matcher[0].nature}} small">
+                        <div class="slice">
+                            <div class="bar"></div>
+                            <div class="fill"></div>
+                        </div>
+                            <a class="nature" href="#"><img class="nature" src="./images/nature.png"> </a>
+                    </div>
+                     <h4>Nature</h4>
+             </div>
+         </div>
+        <!--{{matcher.userData.matcher[0].full_horoscope}} -->
+        <p class="comment more" id="matcherTwo"> In a love affair, there’s bound to be fireworks. These two are always competing, which can make for quite a challenging love match. An Aries-Aries relationship is like looking into a mirror: Aries understands their partner’s need for independence because they’re the same way. At times, however, they can be possessive and turn into two Rams butting heads. {{jsFunction()}} </p>
+        <a id="contactUs" href="#">Have an urgent question? <br> Contact Us</a> 
+    </div>
+    </div>
+</div>
+
+
+        <div class="col-sm-12">
+            <footer>
+                <p>© Copyright 2016 Shenkar-College Students: <span> Niv Baruch && Alaa Halumi</span></p>
+            </footer>
+        </div>
+
+<script>
+
+function seeMore(){
+
+    console.log("inside see more");
+    var showChar = 570;
+    var ellipsestext = "...";
+    var moretext = "See more>>";
+    var lesstext = "See less<<";
+    $('.more').each(function() {
+        var content = $(this).html();
+
+        if(content.length > showChar) {
+
+            var c = content.substr(0, showChar);
+            var h = content.substr(showChar-1, content.length - showChar);
+
+            var html = c + '<span class="moreelipses">'+ellipsestext+'</span>&nbsp;<span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">'+moretext+'</a></span>';
+
+            $(this).html(html);
+        }
+
+    });
+
+    $(".morelink").click(function(){
+        if($(this).hasClass("less")) {
+            $(this).removeClass("less");
+            $(this).html(moretext);
+        } else {
+            $(this).addClass("less");
+            $(this).html(lesstext);
+        }
+        $(this).parent().prev().toggle();
+        $(this).prev().toggle();
+        return false;
+    });
+}
+</script>
+
+    <script src="js/lib/angular/angular.min.js"></script>
+    <script src="js/matcher.js"></script>
+</body>
+</html>   

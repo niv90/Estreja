@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="timeLine">
+<head>
+<!--href='/' for support location angular service-->
+<base href="/">
+<meta charset="UTF-8">
+<title>Daily Horoscope</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap-responsive.css" rel="stylesheet">
+<!-- hamburger CSS -->
+<link rel="stylesheet" href="css/hamburger.css">
+
+<!-- our css -->
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/circle.css" />
+</head>
+
+<body>
+  
+
+<header id="top" role="banner">
+    <div class="block">
+        <a class="nav-btn" id="nav-open-btn" href="#nav">Book Navigation</a>
+        <div ng-controller="header">
+                <a href="timeLine.html?uuid={{myUrl}}" target="_self"><img id="logo" src="./images/logo.png"> </a>
+                <a href="timeLine.html?uuid={{myUrl}}" target="_self"><img id="user" src="{{header.matcher.userSystemImage}}">  </a>
+        </div>
+     </div>
+</header>
+<nav id="nav" role="navigation">
+    <div class="block">
+        <div ng-controller="hamburger">
+            <h2 class="block-title">Chapters</h2>
+            <ul>
+                <li class="is-active"><a href="timeLine.html?uuid={{myUrl}}" target="_self">Homepage</a></li>
+                <li><a href="timeLine.html?uuid={{myUrl}}&day=sunday" target="_self">Sunday</a></li>
+                <li><a href="timeLine.html?uuid={{myUrl}}&day=monday" target="_self">Monday</a></li>
+                <li><a href="timeLine.html?uuid={{myUrl}}&day=thesday" target="_self">Thesday</a></li>
+                <li><a href="timeLine.html?uuid={{myUrl}}&day=wednesday" target="_self">Wednesday</a></li>
+                <li><a href="timeLine.html?uuid={{myUrl}}&day=thursday" target="_self">Thursday</a></li>
+                <li><a href="timeLine.html?uuid={{myUrl}}&day=friday" target="_self">Friday</a></li>
+                <li><a href="timeLine.html?uuid={{myUrl}}&day=saturday" target="_self">Saturday</a></li>
+                <li><a href="#">LogOut</a></li>
+            </ul>
+            <a class="close-btn" id="nav-close-btn" href="#top">Return to Content</a>
+        </div>
+    </div>
+</nav>  
+
+<div class="container-fluid">
+    <div class="jumbotron">
+    
+    <div ng-controller="zodiacLogo">
+        <div id="section1">
+            <a href="fullHoroscope.html?uuid={{myUrl}}" target="_self"><img id="horosLogo" src="./images/logo/{{zodiac.matcher.userSystemZodiac}}.png"></a>
+            <h1 id="today">{{zodiac.items[0].title_full_horo}}</h1>
+        </div>
+    </div>
+        <p id="date"></p>
+        <p id="clock"></p>
+
+    <div ng-controller="timeLine">
+
+        <img id=column src="./images/timeline.png">
+        
+        <div ng-repeat="horoscope in horoscopes.items[0].time_line" ng-if="horoscope.good == '1'">
+           
+            <div id="{{horoscope.category}}">
+                <h6>{{horoscope.time}}</h6> 
+                <h3>{{horoscope.title}}</h3>
+                <p>{{horoscope.horoscope}}</p>
+            </div>
+
+        </div>
+
+        <div ng-repeat="horoscope in horoscopes.items[0].time_line" ng-if="horoscope.good == '0'">
+           
+            <div id="{{horoscope.category}}">
+                <h6>{{horoscope.time}}</h6> 
+                <p>{{horoscope.horoscope}}</p>
+            </div>
+
+        </div>
+    
+         <div id="section3">
+            <p id="later"> Come back later <br> and see more </p>
+            <a id="fullHoroscope" ng-href="http://localhost:8080/fullHoroscope.html?uuid={{myUrl}}" target="_self" >Full Horoscope</a>
+        </div>
+    </div>
+    <div class="row" ng-controller="matcherByHoro"> 
+        <h2>Today's Love Matches:</h2>
+        <h4>By Horoscope:</h4>
+        
+        <div ng-repeat="matcher in matcherHoro.matcher.ByHoro">
+            <div class="col-sm-6 col-md-4 col-lg-2">
+                <a ng-href="http://localhost:8080/matcher.html?uuid={{matcher.id}}&match={{matcher.match}}&myid={{myUrl}}" target="_self"><img src="{{matcher.imageUrl}}" class="horoM1"></a>
+                <h4>{{matcher.zodiac  | capitalize}}</h4>
+                <h5>{{matcher.match}}%</h5>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row" id="byName" ng-controller="matcherByName">
+        <h4>By Name:</h4>
+        <div ng-repeat="matcher in matcherName.matcher.byName">
+             <div class="col-sm-6 col-md-4 col-lg-2">
+                 <a ng-href="http://localhost:8080/matcher.html?uuid={{matcher.id}}&match={{matcher.match}}&myid={{myUrl}}" target="_self"><img src="{{matcher.imageUrl}}"  class="nameM1"></a>
+                 <h4>{{matcher.name  | capitalize}}</h4>
+                 <h5>{{matcher.match}}%</h5>
+             </div>
+         </div>
+    </div>
+      
+  <a id="contactUs" href="#">Have an urgent question? <br> Contact Us</a> 
+
+
+
+    </div>
+</div>
+
+
+        <div class="col-sm-12">
+            <footer>
+                <p>© Copyright 2016 Shenkar-College Students: <span> Niv Baruch && Alaa Halumi</span></p>
+            </footer>
+        </div>
+
+
+<script> //day!
+var d = new Date();
+document.getElementById("date").innerHTML = d.toDateString();
+</script>
+
+<script type="text/javascript"> //clock
+
+function getTime( ) {
+    var d = new Date( ); 
+    d.setHours( d.getHours()); // offset from local time
+    var h = (d.getHours() % 12) || 12; // show midnight & noon as 12
+    return (
+        ( h < 10 ? '0' : '') + h +
+        ( d.getMinutes() < 10 ? ':0' : ':') + d.getMinutes() +
+                // optional seconds display
+         ( d.getSeconds() < 10 ? ':0' : ':') + d.getSeconds() +
+          "<br>" + "&nbsp&nbsp&nbsp&nbsp;"  +
+         ( d.getHours() < 12 ? ' AM' : ' PM' )
+    );
+    
+}
+
+var clock = document.getElementById('clock');
+setInterval( function() { clock.innerHTML = getTime(); }, 1000 );
+
+
+</script>
+    <script src="js/lib/angular/angular.min.js"></script>
+    <script src="js/timeLine.js"></script>
+</body>
+</html>   

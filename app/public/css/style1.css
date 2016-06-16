@@ -1,0 +1,357 @@
+
+.loginHeader{
+    text-align: center;
+}
+
+#registerContainer{
+    display: none;
+}
+
+.g-signin2,.g-signout2{
+	margin-left: 42%;
+    margin-top: 3%;
+}
+
+/*Alaa css  */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+header, footer, main, article, section, nav, aside {
+    display:block;
+}
+ .container{
+    margin: 0px auto;
+}
+
+ .navbar-inverse{
+    background: white;
+    border:none;
+    height: 19%;
+    box-shadow: inset 11px 4px 5px rgba(255,255,255,1),10px 3px 9px rgba(0,0,0,0.1);
+ }
+#logo{
+    display: block;
+    width:111px ;
+    height:37px ;
+    background: url("../images/logo.png");
+    top:50px;
+    left:520px;
+    position: absolute;
+}
+
+#user{
+    display: block;
+    width:99px ;
+    height:99px ;
+    background: url("../images/user.png");
+    top:15px;
+    left:20px;
+    position: absolute;
+}
+
+#logOut{
+    top: 34px;
+    left:1180px;
+}
+
+body {
+    background: url("../images/background.png") top repeat-x;
+    font-family: 'Century Gothic';
+}
+
+.container .jumbotron, .container-fluid .jumbotron{
+    background: none;
+     margin-top: 11em;
+    
+}
+#fullWhite{
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 2%;
+}
+#section1{
+    top: 20%;
+    left: 46%;
+    position: relative;
+    margin: 0px auto;
+    width: 100%;
+}
+#section2{
+    position: absolute;
+    margin: 0px auto;
+    top: 340%;
+    width: 100%;
+}
+#section3{
+    position: absolute;
+    top: 1355%;
+    left: 0%;
+    width: 100%;
+}
+#horosLogo{
+    width: 95px;
+    height: 75px;
+    background: url("../images/aries.png");
+    position: absolute;
+    margin: 0px auto;
+}
+#horosLogoPink{
+    width: 94px;
+    height: 72px;
+    background: url("../images/ariesPink.png");
+    position: relative;
+    margin: 0px auto; 
+    display:block;
+}
+
+#today {
+    font-size: 2.5em;
+    color: #fff;
+    text-transform: uppercase;
+    position: absolute;
+    margin-top: 12%;
+    margin-left: -7%;
+}
+#fulltoday{
+    font-size: 2.7em;
+    color: #030000;
+    text-transform: uppercase;
+    position: relative;
+    margin-top: 0%;
+    left: 8%;
+}
+#column{
+    display: block;
+    width:17%;
+    height: auto;
+    /*width: 69px; */
+   /*  height: 909px; */
+   /* background: url("../images/timeline.png"); */
+    top: 62%;
+    margin: 0px auto;
+    position: relative;
+} 
+#date{
+  /*  font-weight: bold; */
+    font-size: 210%;
+    left: 55%;
+    top: 3%;
+    position: absolute;
+}
+#fulldate{
+    font-size: 210%;
+    left: 8%;
+    top: 3%;
+    position: relative;
+}
+#clock{
+    top: 3%;
+    left: 38%;
+    position: absolute;
+}
+#later{
+    left: 44%;
+    position: absolute;
+    top: 197%;
+    text-align: center;
+    font-weight: bold;
+    color: #8d8e8e;
+}
+.row{
+    margin-top: 130%;
+     border-top: 5px solid #adb7b7;
+     position: relative;
+
+}
+#fullHoroscope{
+    display: block;
+    width: 262px;
+    height: 73px;
+    color: #f38dba;
+    background-color: #fff;
+    border: 5px solid #f38dba;
+    text-transform: uppercase;
+    position: absolute;
+    left: 41%;
+    border-radius: 15px;
+    font-size: 26px;
+    text-align: center;
+    padding-top: 1%;
+    margin-top: 12%;
+}
+#fullHoroscope:hover{
+     background-color: #efebe9;
+     text-decoration: none;
+     color: #fff;
+}
+
+/*#love, #finance, #career{
+    width: 50%;
+    height: auto;
+   font-size: 1.3em
+} */
+
+#love{
+    top: 20%;
+    left: 55%;
+    position: absolute;
+    font-size: 1.3em;
+}
+
+     #love p{
+    font-size: 1.3em;
+    }
+
+#finance{
+    top:51%;
+     left: 55%;
+    position: absolute;
+}
+#career{
+    top: 76%;
+     left: 55%;
+    position: absolute;
+}
+
+h3,h5{
+   color:#f38dba;
+   font-weight: bold;
+}
+
+
+.container,.jumbotron{
+    position: relative;
+}
+hr{
+    margin-bottom: 45px;
+    border: 0;
+    border-top: 5px solid #adb7b7;
+    position: relative;
+    top: 105em;
+}
+
+#byName{
+    margin-top: 0%;
+    border: none;
+    border-bottom: 5px solid #adb7b7;
+    padding-bottom: 7%;
+}
+.col-lg-2 {
+    width: 22%;
+    margin: 0px auto;
+    left: 20%;
+    border-bottom: 3px solid #f38dba;
+    text-align: center;
+}
+.col-sm-12{
+    margin: 5em 0 0 0;
+    border-top: 1px solid #adb7b7;
+    text-align: center;
+    padding:1em;
+    bottom:0px;
+
+}
+.col-sm-12 span{
+    font-weight: bold;
+}
+
+#horoM1,#horoM2,#horoM3,#nameM1,#nameM2,#nameM3{
+    width: 116px;
+    height: 115px;
+    position: relative;
+    margin: 0px auto;
+    padding-bottom: 55%;
+    display: block;
+}
+#horoM1{
+     background: url("../images/horoM1.png") no-repeat;
+}
+#horoM2{
+    background: url("../images/horoM2.png") no-repeat;
+}
+#horoM3{
+    background: url("../images/horoM3.png") no-repeat;
+}
+#nameM1{
+     background: url("../images/nameM1.png") no-repeat;
+}
+#nameM2{
+    background: url("../images/nameM2.png") no-repeat;
+}
+#nameM3{
+    background: url("../images/nameM3.png") no-repeat;
+}
+#contactUs{
+    width: 225px;
+    height: 66px;
+    display: block;
+    color: #fff;
+    background-color: #f38dba;
+    border-radius: 7%;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 2em;
+    text-align: center;
+    margin: 0px auto;
+    margin-top: 1em;
+    padding:1%;
+}
+#contactUs:hover{
+    color: #f38dba;
+    background-color: #fff;
+    border: 2px solid #f38dba;
+    text-decoration: none;
+    font-weight: bold;
+}
+#fullDetails{
+    width: 85%;
+    margin: 0px auto;
+    padding: 10%;
+    font-size: 1.3em;
+    border-bottom: 5px solid #adb7b7;
+}
+
+#loveFull, #financeFull, #careerFull{
+    position: relative;
+    margin: 0px auto;
+    display: block;
+    z-index: 9;
+    top: 0.3em;
+}
+#loveFull{
+    background: url("../images/loveFull.png") no-repeat;
+    width:48px;
+    height: 43px;
+
+}
+#financeFull{
+    background: url("../images/financeFull.png") no-repeat;
+    width: 29px;
+    height: 49px;
+
+}
+#careerFull{
+    background: url("../images/careerFull.png") no-repeat;
+    width:57px;
+    height: 47px;
+
+}
+h6{
+    position: absolute;
+    left: -47%;
+    top: 51%;
+}
+.clear{
+    clear:both;
+}
+/*img{
+    width: 70%;
+    height: auto;
+} */
+
+@media(max-width: 520px){
+     #love p{
+    font-size: 20%;
+    }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Signin Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    
+    <!-- Custom styles for this template -->
+    <link href="css/signin.css" rel="stylesheet">
+    <!-- hamburger CSS -->
+    <link rel="stylesheet" href="css/hamburger.css">
+
+    <!-- My Css -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- My Js -->
+    <script src="js/login.js"></script>
+  
+    <!-- Google API -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+  </head>
+
+<body>
+
+  <header id="top" role="banner">
+    <div class="block">
+        <a href="index.html" target="_self"><img id="logoSignIn" src="./images/logo.png"> </a>    
+    </div>
+  </header>
+
+    <div class="container-fluid">
+     <div class="jumbotron">
+
+    <h2 id="loginHeader">Search for your daily Horoscope with ESTREJA! </h2>
+    
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <br>
+    <!-- sign out from the system -->
+    <!-- <a class="g-signout2" href="#" onclick="signOut();">Sign out</a> -->
+    
+    <div id="registerContainer">
+
+       <h2 id="loginHeader">Hello, Please register to our ESTREJA: </h2>
+       <form class="form-signin" action="http://localhost:3000/ws_horoscope/setNewUser" method="POST">
+        
+        <label>Name: <input type="text" name="name" class="form-control" required autofocus></label>
+        <label>Last Name: <input type="text" name="lastName" class="form-control" required autofocus></label>
+        <label>Email address: <input name="email" type="email" class="form-control"  required autofocus> </label><br>   
+        <label>Gender:</label><br>
+        <label>Male <input type="radio" class="form-control" name="gender" value="male" required autofocus></label>
+        <label>Female <input type="radio" class="form-control" name="gender" value="female" required autofocus></label><br>
+        <label>Zodiac: <input type="text" name="zodiac" class="form-control"  required autofocus> </label>
+        <label>Travel:<br> 0<input type="range" name="travel" max="100" min="0" value="" required autofocus>100 </label><br>
+        <label>Art:<br> 0<input type="range" name="art" max="100" min="0" value="" required autofocus>100 </label><br>
+        <label>Nature:<br>  0<input type="range" name="nature" max="100" min="0" value="" required autofocus>100</label><br>
+        <input  name="imageUrl" id="myField" type="hidden"  value=""> 
+        <input type="submit" value="Send" id="submitForm">
+
+      </form>
+
+    </div>
+    </div>
+  </div> <!-- /container -->
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+  </body>
+</html>
